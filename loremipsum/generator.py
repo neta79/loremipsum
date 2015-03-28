@@ -22,9 +22,8 @@ _SENTENCE_DELIMITERS = ['.', '?', '!']
 # "hello" with a comma next to it)
 _WORD_DELIMITERS = [','] + _SENTENCE_DELIMITERS
 
-_SAMPLE = resource_string(__name__, 'default/sample.txt')
-_DICTIONARY = resource_string(__name__, 'default/dictionary.txt').split()
-
+_SAMPLE = unicode(resource_string(__name__, 'default/sample.txt'), encoding="utf-8")
+_DICTIONARY = unicode(resource_string(__name__, 'default/dictionary.txt'), encoding="utf-8").split()
 _LOREM_IPSUM = 'lorem ipsum dolor sit amet, consecteteur adipiscing elit'
 
 
